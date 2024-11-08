@@ -156,9 +156,9 @@ fs.readFile(file, function(err, data) {
 
               var color = {
                 'lab': [
-                  Math.round(vars.l.readFloatBE(0)*255),
-                  vars.a.readFloatBE(0)+128,
-                  vars.b.readFloatBE(0)+128
+                  vars.l.readFloatBE(0), // can be renormalized to raw value like so: Math.round(vars.l.readFloatBE(0)*255)
+                  vars.a.readFloatBE(0), // can be renormalized to raw value like so: vars.a.readFloatBE(0)+128
+                  vars.b.readFloatBE(0)  // can be renormalized to raw value like so: vars.b.readFloatBE(0)+128
                 ]
               };
             }
